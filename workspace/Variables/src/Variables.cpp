@@ -13,10 +13,12 @@ int main() {
 
 	int numberCats = 5;
 	int numberDogs = 7;
-	int numberAnimals = numberCats + numberDogs;
+	int numberFish = 12;
+	int numberAnimals = numberCats + numberDogs + numberFish;
 
 	cout << "Number of cats: " << numberCats << endl;
 	cout << "Number of dogs: " << numberDogs << endl;
+	cout << "Number of fish: " << numberFish << endl;
 
 	cout << "Total number of animals: " << numberAnimals << endl;
 
@@ -28,7 +30,7 @@ int main() {
 	cout << "New number of dogs: " << numberDogs << endl;
 
 	// Must also "recalculate" numberAnimals
-	numberAnimals = numberCats + numberDogs;
+	numberAnimals = numberCats + numberDogs + numberFish;
 
 	cout << "New total number of animals: " << numberAnimals << endl;
 
