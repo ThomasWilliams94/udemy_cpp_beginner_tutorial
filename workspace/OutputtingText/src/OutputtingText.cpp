@@ -1,10 +1,10 @@
-			#include <iostream>
+#include <iostream>
 using namespace std;
 
 int main() {
 
 	// flush does not create a new line
-cout << "Starting program..." << flush;
+	cout << "Starting program..." << flush;
 
 	// endl does create a new line
 	cout << "This is some text." << endl;
