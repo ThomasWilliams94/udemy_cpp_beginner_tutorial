@@ -11,5 +11,16 @@ using namespace std;
 
 int main() {
 
+	int i = 0;
+
+	cout << "Starting loop." << endl;
+
+	while (i < 5) {
+		cout << i << endl;
+		++i;
+	}
+
+	cout << "Programming quitting..." << endl;
+
 	return 0;
 }
