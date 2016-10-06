@@ -17,7 +17,7 @@ void showMenu() {
 
 }
 
-void processSelection() {
+void getInput() {
 	cout << "Enter selection: " << flush;
 
 	int input;
@@ -42,7 +42,7 @@ int main() {
 
 	showMenu();
 
-	processSelection();
+	getInput();
 
 	return 0;
 }
