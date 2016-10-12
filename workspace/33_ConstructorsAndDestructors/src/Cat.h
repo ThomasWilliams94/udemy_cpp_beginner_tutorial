@@ -15,6 +15,8 @@ private:
 
 public:
 	void speak();
+	Cat();
+	~Cat();
 };
 
 #endif /* CAT_H_ */
