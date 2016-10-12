@@ -7,9 +7,20 @@
 //============================================================================
 
 #include <iostream>
+
+#include "Cat.h"
+
 using namespace std;
 
 int main() {
+
+	Cat tom;
+	tom.makeHappy();
+	tom.speak();
+
+	Cat bob;
+	bob.makeSad();
+	bob.speak();
 
 	return 0;
 }
