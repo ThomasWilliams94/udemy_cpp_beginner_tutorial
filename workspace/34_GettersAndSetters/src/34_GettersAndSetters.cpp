@@ -7,9 +7,18 @@
 //============================================================================
 
 #include <iostream>
+#include "Person.h"
 using namespace std;
 
 int main() {
+
+	Person person;
+
+	cout << person.toString() << endl;
+
+	person.setName("Thomas");
+
+	cout << "Name of person using get method: " << person.getName() << endl;
 
 	return 0;
 }
