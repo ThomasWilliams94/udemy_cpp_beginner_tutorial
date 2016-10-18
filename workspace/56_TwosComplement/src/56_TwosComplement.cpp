@@ -10,6 +10,14 @@
 using namespace std;
 
 int main() {
-	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+
+	char value = 127; // max value you can store in char
+
+	cout << (int)value << endl;
+
+	value++; // "incrementing" makes the value go to min value!
+
+	cout << (int)value << endl;
+
 	return 0;
 }
