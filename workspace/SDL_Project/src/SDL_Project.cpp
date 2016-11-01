@@ -58,7 +58,7 @@ int main(int argc, char* argv[]) {
 	buffer[30000] = 0xFFFFFFFF;
 
 	for(int i=0; i<SCREEN_WIDTH*SCREEN_HEIGHT; i++) {
-		buffer[i] = 0x0080FFFF;
+		buffer[i] = 0xFFFF80FF;
 	}
 
 	SDL_UpdateTexture(texture, NULL, buffer, SCREEN_WIDTH * sizeof(Uint32));
