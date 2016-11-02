@@ -17,16 +17,26 @@ int main(int argc, char* argv[]) {
 
 	Screen screen;
 
-	if(!screen.init()) {
+	if (!screen.init()) {
 		cout << "Error initialising SDL." << endl;
 	}
 
 	while (true) {
 		// Update particles
 		// Draw particles
-		// Check for messages/events
+		for(int y=0; y < Screen::SCREEN_HEIGHT; y++) {
+			for(int x=0; x < Screen::SCREEN_WIDTH; x++) {
+				screen.sexPixel(x, y, 128, 0, 255);
+			}
+		}
 
-		if(!screen.processEvents()) {
+		screen.sexPixel(400, 300, 255, 255, 255);
+
+		// Draw the screen
+		screen.update();
+
+			// Check for messages/events
+		if (!screen.processEvents()) {
 			break;
 		}
 	}

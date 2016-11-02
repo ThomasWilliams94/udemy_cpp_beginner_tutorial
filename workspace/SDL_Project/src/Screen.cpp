@@ -52,18 +52,29 @@ bool Screen::init() {
 
 	memset(m_buffer, 0, SCREEN_WIDTH * SCREEN_HEIGHT * sizeof(Uint32));
 
-	m_buffer[30000] = 0xFFFFFFFF;
+	return true;
+}
 
-	for (int i = 0; i < SCREEN_WIDTH * SCREEN_HEIGHT; i++) {
-		m_buffer[i] = 0xFFFF80FF;
-	}
+void Screen::sexPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue) {
 
+	Uint32 colour = 0;
+
+	colour += red;
+	colour <<= 8;
+	colour += green;
+	colour <<= 8;
+	colour += blue;
+	colour <<= 8;
+	colour += 0xFF;
+
+	m_buffer[(y * SCREEN_WIDTH) + x] = colour;
+}
+
+void Screen::update() {
 	SDL_UpdateTexture(m_texture, NULL, m_buffer, SCREEN_WIDTH * sizeof(Uint32));
 	SDL_RenderClear(m_renderer);
 	SDL_RenderCopy(m_renderer, m_texture, NULL, NULL);
 	SDL_RenderPresent(m_renderer);
-
-	return true;
 }
 
 bool Screen::processEvents() {
