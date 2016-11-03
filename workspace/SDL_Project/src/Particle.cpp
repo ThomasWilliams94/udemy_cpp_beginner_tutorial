@@ -13,15 +13,16 @@ namespace tjw {
 
 Particle::Particle() : m_x(0), m_y(0) {
 	m_direction = (2.0 * M_PI * rand())/RAND_MAX;
-	m_speed = ((2.0 * rand()/RAND_MAX) - 1) * 0.005;
+	m_speed = ((2.0 * rand()/RAND_MAX) - 1) * 0.0002;
 }
 
-void Particle::update() {
+void Particle::update(int interval) {
 	double xSpeed = m_speed * cos(m_direction);
 	double ySpeed = m_speed * sin(m_direction);
 
-	m_x += xSpeed;
-	m_y += ySpeed;
+	// Interval is similar (the same as?) to deltaTime in Unity?
+	m_x += xSpeed * interval;
+	m_y += ySpeed * interval;
 }
 
 Particle::~Particle() {

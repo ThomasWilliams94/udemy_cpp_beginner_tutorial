@@ -18,6 +18,7 @@ public:
 
 private:
 	Particle *m_particles;
+	int lastTime;
 
 public:
 	Swarm();
@@ -26,7 +27,7 @@ public:
 		return m_particles;
 	}
 	;
-	void update();
+	void update(int elapsed);
 };
 
 } /* namespace tjw */

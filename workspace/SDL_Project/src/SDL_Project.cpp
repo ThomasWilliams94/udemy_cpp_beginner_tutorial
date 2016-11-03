@@ -36,7 +36,7 @@ int main(int argc, char* argv[]) {
 
 		screen.clear();
 
-		swarm.update();
+		swarm.update(elapsed);
 
 		unsigned char red = (1 + sin(elapsed*0.0005))*128;
 		unsigned char green = (1 + sin(elapsed*0.0003))*128;
