@@ -14,7 +14,7 @@ namespace tjw {
 
 class Swarm {
 public:
-	const static int NPARTICLES = 3000;
+	const static int NPARTICLES = 2000;
 
 private:
 	Particle *m_particles;
@@ -26,6 +26,7 @@ public:
 		return m_particles;
 	}
 	;
+	void update();
 };
 
 } /* namespace tjw */
